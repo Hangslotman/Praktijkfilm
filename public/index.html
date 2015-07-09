@@ -1,0 +1,198 @@
+<!--<!DOCTYPE html>-->
+<html ng-app="praktijkfilm">
+
+<head>
+
+    <title></title>
+    <base href="/"></base>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="#">
+
+    <link type="text/css" rel="stylesheet" href="packages/materialize/dist/css/materialize.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="packages/materialize/bin/prism.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="assets/css/main.css" media="screen,projection" />
+
+    <script type="text/javascript" src="packages/angular/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="packages/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+    <script type="text/javascript" src="packages/lodash/lodash.min.js"></script>
+    <script type="text/javascript" src="packages/angular-google-maps/dist/angular-google-maps.min.js"></script>
+    <style>
+    
+        .section > .row {
+            margin-left: 0!important;
+            margin-right: 0!important;
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m3">
+                    <a ui-sref="/home" id="site-logo">
+                        <img class="responsive-img" src="assets/img/bedrijfslogo.svg">
+                    </a>
+                </div>
+                <div class="col s12 m9">
+                    <h1>
+                        <span class="red-color">Houding</span>
+                        <span class="grey-color">en</span>
+                        <span class="green-color">Beweging</span>
+                    </h1>
+                </div>
+            </div>
+            
+            <nav>
+                <div class="nav-wrapper">
+                    <div class="container">
+                        <ul id="nav-mobile" class="side-nav">
+                            <li class="logo">
+                                <a href="" id="logo-container">
+                                    <object id="front-page-logo" type="image/svg+xml" data="assets/img/bedrijfslogo.svg">Your browser does not support SVG</object>
+                                </a>
+                            </li>
+                            <li><a ui-sref="home">Home</a></li>
+                            <li class="no-padding">
+                                <ul class="collapsible collapsible-accordion">
+                                    <li class="bold active">
+                                        <a ui-sref="praktijk" class="collapsible-header waves-effect waves-teal active">
+                                            Praktijk
+                                        </a>
+                                        <div class="collapsible-body">
+                                            <ul>
+                                                <li><a ui-sref="mensendieck">Oefentherapie</a></li>
+                                                <li><a ui-sref="shiatsu">Shiatsu</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="bold active">
+                                        <a ui-sref="bedrijven" class="collapsible-header waves-effect waves-teal active">
+                                            Bedrijven
+                                        </a>
+                                        <div class="collapsible-body">
+                                            <ul>
+                                                <li><a ui-sref="training">Training</a></li>
+                                                <li><a ui-sref="werkplek">Werkplek</a></li>
+                                                <li><a ui-sref="stoelmassage">Stoelmassage</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="bold active">
+                                        <a ui-sref="video" class="collapsible-header waves-effect waves-teal active">
+                                            Video
+                                        </a>
+                                        <div class="collapsible-body">
+                                            <ul>
+                                                <li><a ui-sref="pijneducatie">Pijneducatie</a></li>
+                                                <li><a ui-sref="oefeningen">Oefeningen</a></li>
+                                                <li><a ui-sref="werkplek-instellen">Werkplek</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a ui-sref="praktijk">Praktijk</a></li>
+                            <li><a ui-sref="bedrijven">Bedrijven</a></li>
+                            <li><a ui-sref="video">Video</a></li>
+                            <li><a ui-sref="tarieven">Tarieven</a></li>
+                            <li><a ui-sref="contact">Contact</a></li>
+                        </ul>
+                        <a href="#" data-activates="nav-mobile" class="button-collapse">
+                            <i class="medium mdi-navigation-menu"></i>
+                        </a>
+                    </div>
+
+                    <ul class="hide-on-med-and-down">
+                        <li class="active">
+                            <a ui-sref="home">Home</a>
+                        </li>
+                        <li>
+                            <a ui-sref="praktijk" aria-haspopup="true">Praktijk</a>
+                            <ul>
+                                <li><a ui-sref="mensendieck">Oefentherapie</a></li>
+                                <li><a ui-sref="shiatsu">Shiatsu</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a ui-sref="bedrijven">Bedrijven</a>
+                            <ul>
+                                <li><a ui-sref="training">Training</a></li>
+                                <li><a ui-sref="werkplek">Werkplek</a></li>
+                                <li><a ui-sref="stoelmassage">Stoelmassage</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a ui-sref="video">Video</a>
+                            <ul>
+                                <li><a ui-sref="pijneducatie">Pijneducatie</a></li>
+                                <li><a ui-sref="oefeningen">Oefeningen</a></li>
+                                <li><a ui-sref="werkplek-instellen">Werkplek</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a ui-sref="tarieven">Tarieven</a>
+                        </li>
+                        <li>
+                            <a ui-sref="contact">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container white">
+            <!-- CONTENT PER PAGE -->
+            <ui-view></ui-view>
+        </div>
+    </main>
+
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-copyright">
+                <div class="container">
+                    Frank Kleinleugenmors, D. Curtiusstraat 7 unit 408, 1051 JL Amsterdam, 06 26354749, KvK 34274940
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script type="text/javascript" src="packages/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="packages/materialize/bin/materialize.js"></script>
+    <script>
+        (function($) {
+            $(function() {
+                $('.button-collapse').sideNav(
+                {
+                    closeOnClick: true
+                });
+            });
+
+            $('#oefentherapie-shiatsu').hover(
+                function toggleControls() {
+                    if (this.hasAttribute("controls")) {
+                        this.removeAttribute("controls")
+                    } else {
+                        this.setAttribute("controls", "controls")
+                    }
+                });
+            })(jQuery);
+    </script>
+
+</body>
+
+</html>

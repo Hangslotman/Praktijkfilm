@@ -1,0 +1,18 @@
+{
+  "name": "livewebdev",
+  "version": "0.0.0",
+  "authors": [
+    "Donny Hegener <admin@unleashgaming.net>"
+  ],
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}

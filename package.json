@@ -1,0 +1,20 @@
+{
+  "name": "knowl",
+  "author": "Sem Kleinleugenmors",
+  "version": "0.0.0",
+  "description": "practicing",
+  "bin": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.8.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.7.12",
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^1.0.4"
+  }
+}
